@@ -1,0 +1,700 @@
+[
+    {
+        "id": "27365926.3bd966",
+        "type": "debug",
+        "z": "2944ef96.7df8f",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 340.01422119140625,
+        "y": 60.00568389892578,
+        "wires": []
+    },
+    {
+        "id": "876e8dfe.94d38",
+        "type": "mytimeout",
+        "z": "2944ef96.7df8f",
+        "name": "A",
+        "outtopic": "topic1",
+        "outsafe": "on",
+        "outwarning": "Warn!",
+        "outunsafe": "off",
+        "warning": "10",
+        "timer": "30",
+        "ndebug": true,
+        "ignoreCase": false,
+        "repeat": false,
+        "again": false,
+        "x": 338.0142364501953,
+        "y": 129.00567626953125,
+        "wires": [
+            [
+                "b351a331.9cd6f",
+                "86bf11e1.2db3a",
+                "eff45830.ba6298"
+            ],
+            [
+                "a81d17b6.c846e8"
+            ]
+        ]
+    },
+    {
+        "id": "1ddef693.f97b89",
+        "type": "mqtt in",
+        "z": "2944ef96.7df8f",
+        "name": "countdown-in-a",
+        "topic": "home/test/countdown-in-a",
+        "qos": "2",
+        "broker": "a63b9b2a.ae9208",
+        "x": 149.81422424316406,
+        "y": 128.60568237304688,
+        "wires": [
+            [
+                "876e8dfe.94d38",
+                "27365926.3bd966"
+            ]
+        ]
+    },
+    {
+        "id": "b351a331.9cd6f",
+        "type": "mqtt out",
+        "z": "2944ef96.7df8f",
+        "name": "countdown-out-a",
+        "topic": "home/test/countdown-out-a",
+        "qos": "",
+        "retain": "false",
+        "broker": "a63b9b2a.ae9208",
+        "x": 581.8142242431641,
+        "y": 129.60568237304688,
+        "wires": []
+    },
+    {
+        "id": "86bf11e1.2db3a",
+        "type": "debug",
+        "z": "2944ef96.7df8f",
+        "name": "B debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 553.8142242431641,
+        "y": 80.60568237304688,
+        "wires": []
+    },
+    {
+        "id": "eff45830.ba6298",
+        "type": "debug",
+        "z": "2944ef96.7df8f",
+        "name": "B debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 552.8142242431641,
+        "y": 42.605682373046875,
+        "wires": []
+    },
+    {
+        "id": "45ba1e56.21bae",
+        "type": "debug",
+        "z": "2944ef96.7df8f",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 343.81422424316406,
+        "y": 253.60568237304688,
+        "wires": []
+    },
+    {
+        "id": "987f617a.6fc48",
+        "type": "mytimeout",
+        "z": "2944ef96.7df8f",
+        "name": "B",
+        "outtopic": "topic2",
+        "outsafe": "on",
+        "outwarning": "",
+        "outunsafe": "off",
+        "warning": "5",
+        "timer": "10",
+        "ndebug": true,
+        "ignoreCase": false,
+        "repeat": false,
+        "again": false,
+        "x": 341.8142395019531,
+        "y": 322.60567474365234,
+        "wires": [
+            [
+                "1d9d7793.3ba3c8",
+                "becea947.361958",
+                "93325c1b.c505"
+            ],
+            [
+                "b68b0179.f6b42",
+                "3e2c093.1a25ff6"
+            ]
+        ]
+    },
+    {
+        "id": "673af26a.f11b0c",
+        "type": "mqtt in",
+        "z": "2944ef96.7df8f",
+        "name": "countdown-in-b",
+        "topic": "home/test/countdown-in-b",
+        "qos": "2",
+        "broker": "a63b9b2a.ae9208",
+        "x": 153.61422729492188,
+        "y": 322.20568084716797,
+        "wires": [
+            [
+                "987f617a.6fc48",
+                "45ba1e56.21bae"
+            ]
+        ]
+    },
+    {
+        "id": "1d9d7793.3ba3c8",
+        "type": "mqtt out",
+        "z": "2944ef96.7df8f",
+        "name": "countdown-out-b",
+        "topic": "home/test/countdown-out-b",
+        "qos": "",
+        "retain": "false",
+        "broker": "a63b9b2a.ae9208",
+        "x": 585.6142272949219,
+        "y": 323.20568084716797,
+        "wires": []
+    },
+    {
+        "id": "becea947.361958",
+        "type": "debug",
+        "z": "2944ef96.7df8f",
+        "name": "B debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 557.6142272949219,
+        "y": 274.20568084716797,
+        "wires": []
+    },
+    {
+        "id": "93325c1b.c505",
+        "type": "debug",
+        "z": "2944ef96.7df8f",
+        "name": "B debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 556.6142272949219,
+        "y": 236.20568084716797,
+        "wires": []
+    },
+    {
+        "id": "b68b0179.f6b42",
+        "type": "debug",
+        "z": "2944ef96.7df8f",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 549.8142318725586,
+        "y": 428.60566329956055,
+        "wires": []
+    },
+    {
+        "id": "3e2c093.1a25ff6",
+        "type": "mqtt out",
+        "z": "2944ef96.7df8f",
+        "name": "",
+        "topic": "home/test/countdown-out-b-txt",
+        "qos": "0",
+        "retain": "true",
+        "broker": "a63b9b2a.ae9208",
+        "x": 630.8142318725586,
+        "y": 373.60566329956055,
+        "wires": []
+    },
+    {
+        "id": "e4b0e6cc.4eaa68",
+        "type": "debug",
+        "z": "2944ef96.7df8f",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 351.8142318725586,
+        "y": 526.6056632995605,
+        "wires": []
+    },
+    {
+        "id": "5c2c36f6.c0d598",
+        "type": "mytimeout",
+        "z": "2944ef96.7df8f",
+        "name": "C",
+        "outtopic": "",
+        "outsafe": "1",
+        "outwarning": "warn",
+        "outunsafe": "0",
+        "warning": "",
+        "timer": "30",
+        "ndebug": true,
+        "ignoreCase": false,
+        "repeat": false,
+        "again": false,
+        "x": 349.81424713134766,
+        "y": 595.605655670166,
+        "wires": [
+            [
+                "fde8a014.e9a92",
+                "ea69d3a.bba273",
+                "4172e75d.b9b2a8"
+            ],
+            [
+                "29a9af0e.3baf",
+                "facf45eb.b16328"
+            ]
+        ]
+    },
+    {
+        "id": "56bd63c5.8b380c",
+        "type": "mqtt in",
+        "z": "2944ef96.7df8f",
+        "name": "countdown-in-C",
+        "topic": "home/test/countdown-in-c",
+        "qos": "2",
+        "broker": "a63b9b2a.ae9208",
+        "x": 161.6142349243164,
+        "y": 595.2056617736816,
+        "wires": [
+            [
+                "5c2c36f6.c0d598",
+                "e4b0e6cc.4eaa68"
+            ]
+        ]
+    },
+    {
+        "id": "fde8a014.e9a92",
+        "type": "mqtt out",
+        "z": "2944ef96.7df8f",
+        "name": "countdown-out-c",
+        "topic": "home/test/countdown-out-c",
+        "qos": "",
+        "retain": "false",
+        "broker": "a63b9b2a.ae9208",
+        "x": 593.6142349243164,
+        "y": 596.2056617736816,
+        "wires": []
+    },
+    {
+        "id": "ea69d3a.bba273",
+        "type": "debug",
+        "z": "2944ef96.7df8f",
+        "name": "C debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 565.6142349243164,
+        "y": 547.2056617736816,
+        "wires": []
+    },
+    {
+        "id": "4172e75d.b9b2a8",
+        "type": "debug",
+        "z": "2944ef96.7df8f",
+        "name": "C debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 564.6142349243164,
+        "y": 509.20566177368164,
+        "wires": []
+    },
+    {
+        "id": "29a9af0e.3baf",
+        "type": "debug",
+        "z": "2944ef96.7df8f",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 557.8142395019531,
+        "y": 701.6056442260742,
+        "wires": []
+    },
+    {
+        "id": "facf45eb.b16328",
+        "type": "mqtt out",
+        "z": "2944ef96.7df8f",
+        "name": "",
+        "topic": "home/test/countdown-out-c-txt",
+        "qos": "0",
+        "retain": "true",
+        "broker": "a63b9b2a.ae9208",
+        "x": 638.8142395019531,
+        "y": 646.6056442260742,
+        "wires": []
+    },
+    {
+        "id": "a81d17b6.c846e8",
+        "type": "mqtt out",
+        "z": "2944ef96.7df8f",
+        "name": "",
+        "topic": "home/test/countdown-out-a-txt",
+        "qos": "0",
+        "retain": "true",
+        "broker": "a63b9b2a.ae9208",
+        "x": 623.8142318725586,
+        "y": 181.60566329956055,
+        "wires": []
+    },
+    {
+        "id": "9a23709a.9402f",
+        "type": "comment",
+        "z": "2944ef96.7df8f",
+        "name": "Blank warning",
+        "info": "",
+        "x": 137.8142318725586,
+        "y": 51.60566329956055,
+        "wires": []
+    },
+    {
+        "id": "25e1161b.c47cba",
+        "type": "comment",
+        "z": "2944ef96.7df8f",
+        "name": "10/5",
+        "info": "",
+        "x": 125.8142318725586,
+        "y": 250.60566329956055,
+        "wires": []
+    },
+    {
+        "id": "2d36c94f.4496f6",
+        "type": "comment",
+        "z": "2944ef96.7df8f",
+        "name": "\"1\" / \"0\"",
+        "info": "",
+        "x": 131.8142318725586,
+        "y": 524.6056632995605,
+        "wires": []
+    },
+    {
+        "id": "35ba425b.4f02fe",
+        "type": "debug",
+        "z": "2944ef96.7df8f",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 357.01422119140625,
+        "y": 792.0056457519531,
+        "wires": []
+    },
+    {
+        "id": "976ef522.398db8",
+        "type": "mytimeout",
+        "z": "2944ef96.7df8f",
+        "name": "D",
+        "outtopic": "",
+        "outsafe": "on",
+        "outwarning": "warning msg",
+        "outunsafe": "off",
+        "warning": "",
+        "timer": "",
+        "ndebug": true,
+        "ignoreCase": false,
+        "repeat": false,
+        "again": false,
+        "x": 355.0142364501953,
+        "y": 861.0056381225586,
+        "wires": [
+            [
+                "974a55ee.f09128",
+                "946e0bee.3c4e78",
+                "fb591ffa.e390e"
+            ],
+            [
+                "9694c39f.93d8d"
+            ]
+        ]
+    },
+    {
+        "id": "371e70b6.64769",
+        "type": "mqtt in",
+        "z": "2944ef96.7df8f",
+        "name": "countdown-in-d",
+        "topic": "home/test/countdown-in-d",
+        "qos": "2",
+        "broker": "a63b9b2a.ae9208",
+        "x": 166.81422424316406,
+        "y": 860.6056442260742,
+        "wires": [
+            [
+                "976ef522.398db8",
+                "35ba425b.4f02fe"
+            ]
+        ]
+    },
+    {
+        "id": "974a55ee.f09128",
+        "type": "mqtt out",
+        "z": "2944ef96.7df8f",
+        "name": "countdown-out-D",
+        "topic": "Dhome/test/countdown-out-d",
+        "qos": "",
+        "retain": "false",
+        "broker": "a63b9b2a.ae9208",
+        "x": 598.8142242431641,
+        "y": 861.6056442260742,
+        "wires": []
+    },
+    {
+        "id": "946e0bee.3c4e78",
+        "type": "debug",
+        "z": "2944ef96.7df8f",
+        "name": "D debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 570.8142242431641,
+        "y": 812.6056442260742,
+        "wires": []
+    },
+    {
+        "id": "fb591ffa.e390e",
+        "type": "debug",
+        "z": "2944ef96.7df8f",
+        "name": "D debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 569.8142242431641,
+        "y": 774.6056442260742,
+        "wires": []
+    },
+    {
+        "id": "9694c39f.93d8d",
+        "type": "mqtt out",
+        "z": "2944ef96.7df8f",
+        "name": "",
+        "topic": "home/test/countdown-out-d-txt",
+        "qos": "0",
+        "retain": "true",
+        "broker": "a63b9b2a.ae9208",
+        "x": 640.8142318725586,
+        "y": 913.6056251525879,
+        "wires": []
+    },
+    {
+        "id": "9f937e0e.f41ce",
+        "type": "comment",
+        "z": "2944ef96.7df8f",
+        "name": "With warning",
+        "info": "",
+        "x": 154.8142318725586,
+        "y": 783.6056251525879,
+        "wires": []
+    },
+    {
+        "id": "6b8b9ef7.acaf1",
+        "type": "debug",
+        "z": "2944ef96.7df8f",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 380.01422119140625,
+        "y": 1016.6420288085938,
+        "wires": []
+    },
+    {
+        "id": "6b6a02db.61070c",
+        "type": "mytimeout",
+        "z": "2944ef96.7df8f",
+        "name": "msg.payload",
+        "outtopic": "",
+        "outsafe": "on",
+        "outwarning": "warning msg",
+        "outunsafe": "off",
+        "warning": "",
+        "timer": "",
+        "ndebug": true,
+        "ignoreCase": false,
+        "repeat": false,
+        "again": false,
+        "x": 598.0142364501953,
+        "y": 1085.6420211791992,
+        "wires": [
+            [
+                "4d47a71d.84afe8",
+                "7362b31e.b3622c",
+                "65a429cf.f90758"
+            ],
+            [
+                "6ab26508.5c7c6c"
+            ]
+        ]
+    },
+    {
+        "id": "48e72d69.8c98c4",
+        "type": "mqtt in",
+        "z": "2944ef96.7df8f",
+        "name": "countdown-in-msg.payload",
+        "topic": "home/test/countdown-in-msg.payload",
+        "qos": "2",
+        "broker": "a63b9b2a.ae9208",
+        "x": 177.814208984375,
+        "y": 1085.2421417236328,
+        "wires": [
+            [
+                "6b8b9ef7.acaf1",
+                "abf2aeb6.019f8"
+            ]
+        ]
+    },
+    {
+        "id": "4d47a71d.84afe8",
+        "type": "mqtt out",
+        "z": "2944ef96.7df8f",
+        "name": "countdown-out-msg.payload",
+        "topic": "Dhome/test/countdown-out-d",
+        "qos": "",
+        "retain": "false",
+        "broker": "a63b9b2a.ae9208",
+        "x": 851.8142242431641,
+        "y": 1086.2420272827148,
+        "wires": []
+    },
+    {
+        "id": "7362b31e.b3622c",
+        "type": "debug",
+        "z": "2944ef96.7df8f",
+        "name": "D debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 793.8142242431641,
+        "y": 1037.2420272827148,
+        "wires": []
+    },
+    {
+        "id": "65a429cf.f90758",
+        "type": "debug",
+        "z": "2944ef96.7df8f",
+        "name": "D debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 792.8142242431641,
+        "y": 999.2420272827148,
+        "wires": []
+    },
+    {
+        "id": "6ab26508.5c7c6c",
+        "type": "mqtt out",
+        "z": "2944ef96.7df8f",
+        "name": "",
+        "topic": "home/test/countdown-out-msg.payload-txt",
+        "qos": "0",
+        "retain": "true",
+        "broker": "a63b9b2a.ae9208",
+        "x": 893.8142318725586,
+        "y": 1142.2420082092285,
+        "wires": []
+    },
+    {
+        "id": "3294928a.68642e",
+        "type": "comment",
+        "z": "2944ef96.7df8f",
+        "name": "From MQTT msg.payload, to msg",
+        "info": "",
+        "x": 194.81422424316406,
+        "y": 984.2420673370361,
+        "wires": []
+    },
+    {
+        "id": "abf2aeb6.019f8",
+        "type": "function",
+        "z": "2944ef96.7df8f",
+        "name": "",
+        "func": "/*\nmsg.payload = {\n    payload: \"on\",\n    timeout: 10,\n    warning: 5\n}\nmerged with msg and becomes\nmsg = {\n    payload: \"on\",\n    timeout: 10,\n    warning: 5\n}\n\n*/\n\n// Hmm, is msg.payload a string?\nvar nMsg = JSON.parse(msg.payload);\n\nnMsg = Object.assign(msg, nMsg);\n\nreturn nMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 415.0142135620117,
+        "y": 1085.369384765625,
+        "wires": [
+            [
+                "6b6a02db.61070c",
+                "925e48ae.029168"
+            ]
+        ]
+    },
+    {
+        "id": "925e48ae.029168",
+        "type": "debug",
+        "z": "2944ef96.7df8f",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 574.0142211914062,
+        "y": 1022.0966186523438,
+        "wires": []
+    },
+    {
+        "id": "a63b9b2a.ae9208",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "Mozart",
+        "broker": "mozart.uucp",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    }
+]
